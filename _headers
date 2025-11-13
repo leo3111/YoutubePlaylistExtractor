@@ -1,0 +1,11 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  X-XSS-Protection: 1; mode=block
+
+/index.html
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://inv.nadeko.net https://invidious.jing.rocks https://iv.nboeck.de https://invidious.fdn.fr https://yt.artemislena.eu https://invidious.protokolla.fi https://api.allorigins.win; font-src 'self'; frame-ancestors 'none'
+
