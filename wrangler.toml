@@ -1,7 +1,0 @@
-name = "youtube-playlist-extractor"
-compatibility_date = "2024-01-01"
-
-# Cloudflare Pages configuration
-# This project is a static site
-# The index.html file will be served automatically from the root directory
-
