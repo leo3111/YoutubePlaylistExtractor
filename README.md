@@ -2,14 +2,7 @@
 
 A simple, self-contained, and privacy-friendly web tool to extract all video links from a public YouTube playlist. Get a clean list of all video URLs and copy any link to your clipboard with a single click.
 
-> **Note:** This is a fork of the original project with significant improvements and bug fixes.
-
-## 🌐 Live Demo
-
-- **Cloudflare Pages:** Deploy your own instance using the instructions below
-- **GitHub Pages:** Available at [your-username.github.io/YoutubePlaylistExtractor](https://pages.github.com/)
-
-![YouTube Playlist Link Extractor Screenshot](images/screenshot.png)
+> **Note:** This is a fork of the [original project](https://github.com/juanakira/playlist-extractor) with significant improvements and bug fixes. 
 
 ## 🔄 Fork Modifications
 
@@ -165,3 +158,7 @@ To use a custom domain:
 ## 📄 License
 
 This project is open-source and available under the [MIT License](LICENSE). See the `LICENSE` file for more details.
+
+## 🙏 Credits
+
+This project is a fork of the [original playlist-extractor](https://github.com/juanakira/playlist-extractor) by [juanakira](https://github.com/juanakira), with significant enhancements and improvements.
