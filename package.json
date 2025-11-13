@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "A simple, self-contained, and privacy-friendly web tool to extract all video links from a public YouTube playlist.",
   "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build required - static site'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leo3111/YoutubePlaylistExtractor.git"
