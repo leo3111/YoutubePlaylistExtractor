@@ -161,35 +161,6 @@ To use a custom domain:
 2. Click **Custom domains**
 3. Add your domain and follow the DNS configuration instructions
 
-## 💡 Potential Future Improvements
-
--   [ ] Export the entire list as a `.txt` file.
--   [ ] Show video thumbnails and durations next to the titles.
--   [x] Add a "Copy All Links" button. ✅
--   [x] Implement a dark theme. ✅
--   [ ] Add light/dark mode toggle.
--   [ ] Option to format the copied link (e.g., as Markdown).
-
----
-
-## Project Genesis & A Note on AI Collaboration
-
-This project is a practical example of modern human-AI collaboration. Here's a look at how it was built:
-
-1.  **The Idea & First Draft:** The initial concept and requirements were given to Google's Gemini 2.5 Pro (Preview) in AI Studio. The AI generated the first version of the HTML, CSS, and JavaScript, including the core logic to fetch playlist data.
-
-2.  **The First Bug:** The initial AI-generated code immediately hit a real-world roadblock: a **CORS (Cross-Origin Resource Sharing) error**. The API endpoint it chose had security policies that blocked requests from a browser, a common issue the initial code didn't account for.
-
-3.  **Human Debugging & Refinement:** This is where human oversight was critical. I diagnosed the CORS issue and directed the solution: implementing a CORS proxy (`AllOrigins`) to correctly mediate the API request. This step was essential to making the tool functional.
-
-4.  **Final Polish:** From there, I guided the final development, including:
-    *   Correcting factual errors made by the AI (even about its own identity!).
-    *   Improving the user feedback messages.
-    *   Creating this comprehensive `README.md` file and project structure.
-    *   Implementing a modern dark theme with blue and gray tones.
-    *   Optimizing for deployment on Cloudflare Pages.
-
-This tool demonstrates how AI can serve as a powerful 'pair programmer' for rapid prototyping, with a human developer providing the crucial direction, real-world testing, and problem-solving skills needed to build a polished and working final product.
 
 ## 📄 License
 
