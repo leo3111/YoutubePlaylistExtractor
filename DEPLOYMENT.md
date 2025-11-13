@@ -2,44 +2,55 @@
 
 ## 🚀 Quick Start (5 minutes)
 
-### Via Cloudflare Dashboard (Easiest)
+### Step 1: Push to GitHub
 
-1. **Commit and Push to GitHub:**
-   ```bash
-   git add .
-   git commit -m "Ready for Cloudflare Pages"
-   git push origin main
-   ```
+```bash
+git add .
+git commit -m "Ready for Cloudflare Pages"
+git push origin main
+```
 
-2. **Deploy on Cloudflare:**
+### Step 2: Deploy on Cloudflare
+
+1. **Go to Cloudflare Dashboard:**
    - Visit: https://dash.cloudflare.com/
-   - Go to **Workers & Pages** → **Create Application** → **Pages** → **Connect to Git**
+   - Navigate to **Workers & Pages** → **Pages**
+
+2. **Connect to Git:**
+   - Click **Create application** → **Pages** → **Connect to Git**
    - Authorize GitHub and select your repository
-   - Configure:
-     - **Project name:** `youtube-playlist-extractor`
-     - **Production branch:** `main`
-     - **Build command:** (leave empty)
-     - **Build output directory:** `/`
+
+3. **Configure Build Settings:**
+
+   **IMPORTANT - Use these exact settings:**
+
+   | Setting | Value |
+   |---------|-------|
+   | **Project name** | `youtube-playlist-extractor` (or your choice) |
+   | **Production branch** | `main` |
+   | **Framework preset** | None |
+   | **Build command** | **(leave completely empty)** |
+   | **Build output directory** | `/` |
+
+4. **Deploy:**
    - Click **Save and Deploy**
+   - Wait 1-2 minutes for deployment to complete
 
-3. **Done!** Your site will be live at `https://youtube-playlist-extractor.pages.dev`
+### Step 3: Done!
 
-## 🔧 Via Wrangler CLI (Advanced)
+Your site will be live at: `https://youtube-playlist-extractor.pages.dev`
 
-1. **Install Wrangler:**
-   ```bash
-   npm install
-   ```
+## 🔄 Automatic Deployments
 
-2. **Login:**
-   ```bash
-   npx wrangler login
-   ```
+Once connected, every `git push` to `main` automatically triggers a new deployment. No commands needed!
 
-3. **Deploy:**
-   ```bash
-   npm run deploy
-   ```
+```bash
+# Make changes to your code
+git add .
+git commit -m "Update feature"
+git push origin main
+# 🎉 Cloudflare automatically deploys the changes!
+```
 
 ## 🌐 Custom Domain (Optional)
 
@@ -47,18 +58,13 @@
 2. Click **Custom domains** → **Set up a custom domain**
 3. Add your domain and update DNS records as instructed
 
-## 🔄 Auto-Deploy
-
-Once connected, every `git push` to `main` automatically deploys to production!
-
 ## 📝 Project Structure
 
 ```
 YoutubePlaylistExtractor/
 ├── index.html          # Main application file
 ├── _headers            # Security headers configuration
-├── wrangler.toml       # Cloudflare configuration
-├── package.json        # npm scripts
+├── package.json        # Project metadata
 ├── .gitignore          # Git ignore rules
 ├── README.md           # Full documentation
 ├── DEPLOYMENT.md       # This file
@@ -66,16 +72,23 @@ YoutubePlaylistExtractor/
 └── images/             # Screenshots
 ```
 
+**Note:** No build configuration files (`wrangler.toml`, `webpack.config.js`, etc.) are needed - this is a pure static HTML site!
+
 ## ❓ Troubleshooting
 
-**Issue:** Build fails
-- **Solution:** Check that build command is empty and output directory is `/`
+**Issue:** Build fails with configuration errors
+- **Solution:** Make sure the build command field is **completely empty** (not even a space)
+- **Solution:** Verify build output directory is exactly `/` (forward slash)
 
-**Issue:** 404 on deployment
-- **Solution:** Ensure `index.html` exists in the root directory
+**Issue:** 404 error on deployment
+- **Solution:** Ensure `index.html` exists in the root directory of your repository
 
-**Issue:** CORS errors
-- **Solution:** The `_headers` file should be deployed automatically
+**Issue:** CORS errors when fetching playlists
+- **Solution:** The `_headers` file must be in the root directory and will be deployed automatically
+- **Solution:** Check that `_headers` file has proper CORS configuration for API domains
+
+**Issue:** "Configuration file does not support 'site'" error
+- **Solution:** Delete any `wrangler.toml` file if it exists - it's not needed for Pages deployments
 
 ## 📚 More Information
 

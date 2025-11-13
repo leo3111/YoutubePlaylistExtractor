@@ -3,11 +3,6 @@
   "version": "2.0.0",
   "description": "A simple, self-contained, and privacy-friendly web tool to extract all video links from a public YouTube playlist.",
   "main": "index.html",
-  "scripts": {
-    "dev": "wrangler pages dev .",
-    "deploy": "wrangler pages deploy .",
-    "preview": "wrangler pages deployment list"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leo3111/YoutubePlaylistExtractor.git"
@@ -24,9 +19,6 @@
   "bugs": {
     "url": "https://github.com/leo3111/YoutubePlaylistExtractor/issues"
   },
-  "homepage": "https://github.com/leo3111/YoutubePlaylistExtractor#readme",
-  "devDependencies": {
-    "wrangler": "^3.0.0"
-  }
+  "homepage": "https://github.com/leo3111/YoutubePlaylistExtractor#readme"
 }
 

@@ -80,7 +80,7 @@ This project is optimized for deployment on Cloudflare Pages, which offers free 
 - A GitHub account
 - A Cloudflare account (free tier is sufficient)
 
-### Method 1: Deploy via Cloudflare Dashboard (Recommended)
+### Deployment Steps
 
 1. **Push to GitHub:**
    ```bash
@@ -92,60 +92,35 @@ This project is optimized for deployment on Cloudflare Pages, which offers free 
 2. **Connect to Cloudflare Pages:**
    - Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
    - Navigate to **Workers & Pages** → **Pages**
-   - Click **Create a project** → **Connect to Git**
-   - Select your GitHub repository: `YoutubePlaylistExtractor`
+   - Click **Create application** → **Pages** → **Connect to Git**
+   - Authorize GitHub and select your repository: `YoutubePlaylistExtractor`
 
 3. **Configure Build Settings:**
    - **Project name:** `youtube-playlist-extractor` (or your preferred name)
    - **Production branch:** `main`
-   - **Build command:** Leave empty (no build needed)
-   - **Build output directory:** `/` (root directory)
+   - **Framework preset:** None
+   - **Build command:** **(leave completely empty)**
+   - **Build output directory:** `/`
    - Click **Save and Deploy**
 
 4. **Access Your Site:**
    - Your site will be available at: `https://youtube-playlist-extractor.pages.dev`
    - You can also add a custom domain in the Pages settings
 
-### Method 2: Deploy via Wrangler CLI
-
-1. **Install Wrangler:**
-   ```bash
-   npm install -g wrangler
-   # or
-   npm install
-   ```
-
-2. **Login to Cloudflare:**
-   ```bash
-   wrangler login
-   ```
-
-3. **Deploy:**
-   ```bash
-   npm run deploy
-   # or
-   wrangler pages deploy .
-   ```
-
-4. **View Deployments:**
-   ```bash
-   npm run preview
-   ```
-
-### Environment Configuration
+### Configuration Files
 
 The project includes:
-- `wrangler.toml`: Cloudflare Pages configuration
-- `_headers`: Security headers and CORS policy
+- `_headers`: Security headers and CORS policy for API requests
 - `.gitignore`: Excludes unnecessary files from deployment
-- `package.json`: npm scripts for easy deployment
 
 ### Automatic Deployments
 
 Once connected to GitHub, Cloudflare Pages will automatically:
 - Deploy on every push to the `main` branch
 - Create preview deployments for pull requests
-- Provide deployment status and logs
+- Provide deployment status and logs in the dashboard
+
+No build tools or configuration files are needed - it's a pure static site!
 
 ### Custom Domain (Optional)
 
