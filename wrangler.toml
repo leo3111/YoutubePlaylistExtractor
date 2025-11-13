@@ -1,17 +1,7 @@
 name = "youtube-playlist-extractor"
 compatibility_date = "2024-01-01"
-pages_build_output_dir = "."
 
 # Cloudflare Pages configuration
-# This project is a static site, so we use Pages for deployment
-# The index.html file will be served automatically
-
-[site]
-bucket = "."
-
-# Optional: Set custom routes if needed
-# [env.production]
-# routes = [
-#   { pattern = "*", zone_name = "yourdomain.com" }
-# ]
+# This project is a static site
+# The index.html file will be served automatically from the root directory
 
